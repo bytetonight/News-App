@@ -234,7 +234,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
 
-    public void showConfigDialog() {
+    private void showConfigDialog() {
 
         Log.v("###","showConfigDialog");
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);

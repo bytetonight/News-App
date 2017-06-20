@@ -6,7 +6,7 @@ import android.content.Context;
  * Created by ByteTonight on 16.06.2017.
  */
 
-public class Article extends BaseModel {
+public class Article {
     //private Context context;
     private String id = "";
     private String type = ""; //article
@@ -18,18 +18,12 @@ public class Article extends BaseModel {
     private String apiUrl = "";
     private boolean isHosted = false;
 
-    public Article(Context c)
+    public Article()
     {
-        super(c);
+
     }
 
-    public Context getContext() {
-        return context;
-    }
 
-    public void setContext(Context context) {
-        this.context = context;
-    }
 
     public String getId() {
         return id;

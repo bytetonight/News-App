@@ -15,7 +15,7 @@ import java.util.List;
 
 public class SectionLoader extends AsyncTaskLoader<List<Section>> {
 
-    String sourceUrl;
+    private String sourceUrl;
 
 
     public SectionLoader(Context context, String url) {
@@ -45,9 +45,9 @@ public class SectionLoader extends AsyncTaskLoader<List<Section>> {
 
         // Extract relevant fields from the JSON response and create an {@link Event} object
 
-        List<Section> sections = Utils.getSectionsFromJSON(getContext(), jsonResponse);
+        return Utils.getSectionsFromJSON(getContext(), jsonResponse);
 
-        return sections;
+
     }
 
 

@@ -6,15 +6,15 @@ import android.content.Context;
  * Created by ByteTonight on 19.06.2017.
  */
 
-public class Section extends BaseModel {
+public class Section {
 
     private String id;
     private String webTitle;
     private String webUrl;
     private String apiUrl;
 
-    public Section(Context c) {
-        super(c);
+    public Section() {
+
     }
 
 

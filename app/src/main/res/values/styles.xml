@@ -42,15 +42,6 @@
         <item name="android:layout_height">@dimen/list_item_header_height</item>
     </style>
 
-    <style name="list_item_header_image">
-        <item name="android:layout_width">@dimen/list_item_header_height</item>
-        <item name="android:layout_height">@dimen/list_item_header_height</item>
-        <item name="android:gravity">left</item>
-        <item name="android:layout_gravity">left</item>
-        <item name="android:adjustViewBounds">true</item>
-        <item name="android:background">@android:color/transparent</item>
-        <item name="android:scaleType">fitCenter</item>
-    </style>
 
     <style name="list_item_header_text">
         <item name="android:layout_width">match_parent</item>
@@ -83,25 +74,6 @@
 
     </style>
 
-    <style name="list_item_action_text">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginRight">@dimen/list_item_action_text_margin</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="list_item_action_text_blue" parent="list_item_action_text">
-        <item name="android:textColor">@color/list_item_action_text_color</item>
-    </style>
-
-    <style name="search_text">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">@dimen/search_btn_top_margin</item>
-    </style>
-
-
 
     <style name="Widget.AppCompat.ProgressBar.blurb">
         <item name="android:layout_width">wrap_content</item>
@@ -121,19 +93,6 @@
         <item name="android:layout_height">match_parent</item>
     </style>
 
-    <style name="details_activity_dummy_text">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginRight">@dimen/constraint_view_padding</item>
-        <item name="android:layout_marginLeft">@dimen/constraint_view_padding</item>
-        <item name="android:layout_marginBottom">@dimen/constraint_view_padding</item>
-        <item name="android:layout_marginTop">@dimen/constraint_view_padding</item>
-    </style>
-
-    <style name="one_of_the_things_I_hate_about_styles_is_choosing_a_name_for_nothingness">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
 
     <style name="empty_view" parent="@android:style/TextAppearance.Large">
         <item name="android:layout_width">fill_parent</item>
@@ -141,16 +100,5 @@
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="thank_god_styles_can_be_extracted_and_I_found_out">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:orientation">horizontal</item>
-    </style>
-
-    <style name="you_have_no_idea_how_much_I_hate_this">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:orientation">vertical</item>
-    </style>
 
 </resources>

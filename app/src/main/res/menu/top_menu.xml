@@ -5,6 +5,6 @@
     <item
         android:id="@+id/options"
         android:icon="@android:drawable/ic_menu_manage"
-        android:title="Options"
+        android:title="@string/options"
         app:showAsAction="ifRoom" />
 </menu>

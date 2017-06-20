@@ -1,7 +1,6 @@
 package android.example.com.mynewsapp.loaders;
 
 import android.content.Context;
-import android.example.com.mynewsapp.models.BaseModel;
 import android.example.com.mynewsapp.utils.Utils;
 import android.example.com.mynewsapp.models.Article;
 import android.support.v4.content.AsyncTaskLoader;
@@ -16,7 +15,7 @@ import java.util.List;
 
 public class ArticleLoader extends AsyncTaskLoader<List<Article>> {
 
-    String sourceUrl;
+    private String sourceUrl;
 
 
     public ArticleLoader(Context context, String url) {
@@ -45,9 +44,9 @@ public class ArticleLoader extends AsyncTaskLoader<List<Article>> {
         }
 
         // Extract relevant fields from the JSON response and create an {@link Event} object
-        List<Article> articles = Utils.getArticlesFromJSON(getContext(), jsonResponse);
+        return Utils.getArticlesFromJSON(getContext(), jsonResponse);
 
-        return articles;
+
     }
 
 

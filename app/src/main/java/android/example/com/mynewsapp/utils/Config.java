@@ -13,7 +13,7 @@ public class Config {
     public static final String PARAM_API_KEY = "api-key";
     public static final String PARAM_API_KEY_VALUE = "test";
     public static final String PARAM_QUERY = "q";
-    public static final String API_URL = "https://content.guardianapis.com/";
+    private static final String API_URL = "https://content.guardianapis.com/";
     public static final String API_SECTIONS_ENDPOINT = API_URL + "sections";
     public static final String API_SEARCH_ENDPOINT = API_URL + "search"; // ?q=debates
 }

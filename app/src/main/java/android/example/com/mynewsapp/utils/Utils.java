@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.example.com.mynewsapp.R;
 import android.example.com.mynewsapp.models.Article;
-import android.example.com.mynewsapp.models.BaseModel;
 import android.example.com.mynewsapp.models.Section;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -30,17 +29,17 @@ import java.util.ArrayList;
  */
 
 public class Utils {
-    public static final String LOG_TAG = Utils.class.getName();
-    public static final String KEY_RESPONSE = "response";
-    public static final String KEY_RESPONSE_STATUS = "status";
-    public static final String ARRAY_KEY_RESULTS = "results";
-    public static final String KEY_ID = "id";
+    private static final String LOG_TAG = Utils.class.getName();
+    private static final String KEY_RESPONSE = "response";
+    private static final String KEY_RESPONSE_STATUS = "status";
+    private static final String ARRAY_KEY_RESULTS = "results";
+    private static final String KEY_ID = "id";
     public static final String KEY_ARTICLE_TYPE = "type";
     public static final String KEY_SECTION_ID = "sectionId";
-    public static final String KEY_SECTION_NAME = "sectionName";
+    private static final String KEY_SECTION_NAME = "sectionName";
     public static final String KEY_WEB_PUBLICATION_DATE = "webPublicationDate";
-    public static final String KEY_WEB_TITLE = "webTitle";
-    public static final String KEY_WEB_URL = "webUrl";
+    private static final String KEY_WEB_TITLE = "webTitle";
+    private static final String KEY_WEB_URL = "webUrl";
     public static final String KEY_API_URL = "ApiTitle";
     public static final String KEY_IS_HOSTED = "isHosted";
 
@@ -137,13 +136,7 @@ public class Utils {
             //Uncomment the 2 lines below to raise a JSONException, and see how it's handled
             //if (true)
             //throw new JSONException("Some Element was not found... yada");
-            if (responseNode.has(KEY_RESPONSE_STATUS)) {
-                String status = responseNode.getString(KEY_RESPONSE_STATUS);
-                if (!status.equalsIgnoreCase("ok")) {
-                    //Something went wrong
-                }
 
-            }
             if (responseNode.has(ARRAY_KEY_RESULTS)) {
                 JSONArray articlesArray = responseNode.getJSONArray(ARRAY_KEY_RESULTS); //JSON Node named items
                 int articlesArrayLength = articlesArray.length();
@@ -163,7 +156,7 @@ public class Utils {
                             curArt.getString(KEY_WEB_TITLE) : "";
 
 
-                    Article article = new Article(context);
+                    Article article = new Article();
                     article.setWebTitle(webTitle);
                     article.setSectionName(sectionName);
                     article.setWebUrl(webUrl);
@@ -201,13 +194,7 @@ public class Utils {
             //Uncomment the 2 lines below to raise a JSONException, and see how it's handled
             //if (true)
             //throw new JSONException("Some Element was not found... yada");
-            if (responseNode.has(KEY_RESPONSE_STATUS)) {
-                String status = responseNode.getString(KEY_RESPONSE_STATUS);
-                if (!status.equalsIgnoreCase("ok")) {
-                    //Something went wrong
-                }
 
-            }
             if (responseNode.has(ARRAY_KEY_RESULTS)) {
                 JSONArray articlesArray = responseNode.getJSONArray(ARRAY_KEY_RESULTS); //JSON Node named items
                 int articlesArrayLength = articlesArray.length();
@@ -220,7 +207,7 @@ public class Utils {
                             curArt.getString(KEY_WEB_TITLE) : "";
 
 
-                    Section section = new Section(context);
+                    Section section = new Section();
                     section.setWebTitle(webTitle);
 
                     sections.add(section);
@@ -242,8 +229,8 @@ public class Utils {
         ConnectivityManager cm =
                 (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
-        boolean isWiFi = activeNetwork.getType() == ConnectivityManager.TYPE_WIFI;
-        return isWiFi;
+        return activeNetwork.getType() == ConnectivityManager.TYPE_WIFI;
+
     }
 
     public static boolean hasConnection(Context context) {
