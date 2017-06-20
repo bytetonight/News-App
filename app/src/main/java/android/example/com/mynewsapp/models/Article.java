@@ -7,7 +7,7 @@ import android.content.Context;
  */
 
 public class Article {
-    //private Context context;
+
     private String id = "";
     private String type = ""; //article
     private String sectionId = "";

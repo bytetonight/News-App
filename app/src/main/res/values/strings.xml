@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">MyNewsApp</string>
     <string name="preference_file_key">d7as9asd76</string>
+    <string name="no_app_found">Missing Browser : No App found to open Url</string>
     <string name="json_error">Problem parsing JSON results</string>
     <string name="strNoRecordsFound">No Results found</string>
     <string name="current_news_section">Current News Section</string>
