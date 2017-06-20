@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MyNewsApp</string>
+    <string name="preference_file_key">d7as9asd76</string>
+    <string name="json_error">Problem parsing JSON results</string>
+    <string name="strNoRecordsFound">No Results found</string>
+    <string name="btn_details">View this</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="current_news_section">Current News Section</string>
+    <string name="dlg_button_ok">OK</string>
+    <string name="dlg_button_cancel">Cancel</string>
+</resources>
