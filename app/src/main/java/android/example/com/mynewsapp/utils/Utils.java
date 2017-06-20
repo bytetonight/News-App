@@ -31,7 +31,6 @@ import java.util.ArrayList;
 
 public class Utils {
     public static final String LOG_TAG = Utils.class.getName();
-    public static final String ARG_BOOK = "arg_book";
     public static final String KEY_RESPONSE = "response";
     public static final String KEY_RESPONSE_STATUS = "status";
     public static final String ARRAY_KEY_RESULTS = "results";

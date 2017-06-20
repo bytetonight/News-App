@@ -45,9 +45,9 @@ public class SectionLoader extends AsyncTaskLoader<List<Section>> {
 
         // Extract relevant fields from the JSON response and create an {@link Event} object
 
-        List<Section> books = Utils.getSectionsFromJSON(getContext(), jsonResponse);
+        List<Section> sections = Utils.getSectionsFromJSON(getContext(), jsonResponse);
 
-        return books;
+        return sections;
     }
 
 

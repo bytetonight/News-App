@@ -45,9 +45,9 @@ public class ArticleLoader extends AsyncTaskLoader<List<Article>> {
         }
 
         // Extract relevant fields from the JSON response and create an {@link Event} object
-        List<Article> books = Utils.getArticlesFromJSON(getContext(), jsonResponse);
+        List<Article> articles = Utils.getArticlesFromJSON(getContext(), jsonResponse);
 
-        return books;
+        return articles;
     }
 
 
